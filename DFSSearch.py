@@ -18,7 +18,7 @@ def find_path_dfs(grid):
 
         if cell.down_expanded and cell.right_expanded:
             popped_cell = my_stack.pop()
-
+            print(curr_path)
             if cell.x == n and cell.y == n:
                 if curr_val > best_val:
                     best_val, best_path = curr_val, curr_path
@@ -43,7 +43,7 @@ def find_path_dfs(grid):
 
 
 if __name__ == '__main__':
-    n = 5
+    n = 2
     grid = generate_grid(n, 100)
     val, path = find_path_dfs(grid)
 

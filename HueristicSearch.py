@@ -2,7 +2,7 @@ from GridSetUp import generate_grid
 from Printers import print_map, print_path
 
 
-def find_path_a_star(grid):
+def find_path_heuristic(grid):
     n = len(grid) - 1
     x, y = 0, 0
     path = ""
@@ -60,7 +60,7 @@ def sum_row(grid, x, y, n, sum_type):
 if __name__ == '__main__':
     n = 20
     grid = generate_grid(n, 50)
-    val, path = find_path_a_star(grid)
+    val, path = find_path_heuristic(grid)
     print_map(grid)
     print("----------")
     print(val)
